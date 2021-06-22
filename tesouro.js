@@ -3,7 +3,7 @@
 *
 ***************** MAIN FUNCTIONS ****************
 *
-* @return Returns data from Brazilian Government Bonds: Name, Withdraw Value, Withdraw Date, Reference Date (English Language).
+* @return Returns data from Brazilian Government Bonds: Name, Withdraw Value, Withdraw Date, Reference Date, Semi-annual Coupon (English Language).
 * @customfunction
 **/
 function BrazilianBond(valores) {
@@ -28,7 +28,7 @@ function BrazilianBond(valores) {
     return valoresArray;
 }
 /*
-* @return Returns data from Brazilian Government Bonds: Name, Withdraw Value, Withdraw Date, Reference Date (Portuguese Language).
+* @return Returns data from Brazilian Government Bonds: Name, Withdraw Value, Withdraw Date, Reference Date, Semi-annual Coupon (Portuguese Language).
 * @customfunction
 **/
 function TesouroDireto(valores) {
@@ -88,6 +88,8 @@ function RetornaPadrao(source, part, atual) {
             return source.TrsrBd.untrRedVal;
         case "datafim":
             return new Date(source.TrsrBd.mtrtyDt);
+        case "semestral":
+            return source.TrsrBd.semiAnulIntrstInd;
         default:
             return "#ERROR";
     }
@@ -106,6 +108,8 @@ function RetornaPadraoEn(source, part, atual) {
             return source.TrsrBd.untrRedVal;
         case "wtddate":
             return new Date(source.TrsrBd.mtrtyDt);
+        case "semiannual":
+            return source.TrsrBd.semiAnulIntrstInd;
         default:
             return "#ERROR";
     }
