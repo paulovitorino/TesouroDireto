@@ -1,4 +1,5 @@
 /*
+* Copyright (c) 2021 Paulo Vitorino (https://github.com/paulovitorino)
 * @return Returns data from Brazilian Government Bonds: Name, Withdraw Value, Withdraw Date, Reference Date.
 * @customfunction
 **/
